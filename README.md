@@ -2,19 +2,30 @@
 The main change I made from Andrew Taylor's adaptation for the KIM-1 was fix/add the auto-advance code in the simple assembler.
 
  display registers [R]
+ 
  exit monitor [X]	to eWoz
+ 
  display memory [M]	aaaa bbbb   (if no B, display 1 pg; just M for next pg)
+ 
  alter registers [;]	print with R, then mimic #s. RET when done
+ 
  alter memory [>]	>aaaa hh hh hh hh...  8 bytes max (buffer limits)
+ 
  goto (JMP) [G]	aaaa
+ 
  jump (JSR) [J]	aaaa
+ 
  compare memory [C]	aaaa bbbb zzzz   look bet adrs A&B, start compare at Z
+ 
  transfer memory [T]	aaaa bbbb zzzz   copy from A thru B, store at Z
+ 
  hunt memory [H]	aaaa bbbb 'TEXT...  or  hh hh hh...   30 bytes max
+ 
  fill memory [F]	aaaa bbbb hh   one byte only
+ 
  assemble [A]		aaaa ooo nn|bbbb   auto adv.; RET alone when done
- disassemble [D]	aaaa bbbb   (if no B, disamb 22 bytes-worth;
-					another D gives 22 more bytes)
+ 
+ disassemble [D]	aaaa bbbb   (if no B, disamb 22 bytes-worth; another D gives 22 more bytes)
 
 Key locations, etc., for adaptation and reassembly
 ==================================================
