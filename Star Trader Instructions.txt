@@ -1,0 +1,69 @@
+S T A R   T R A D E R
+
+Original, multi-player HP-BASIC game by Dave Kaufman, 1973
+
+Solo version by Richard Woolcock and Cameron Duffy in the book "Commodore 16 Games Book", 1984, Melbourne House Pub., AUS.
+
+This solo version - translated, revised, and expanded - for Altair 680 BASIC 1.1 by Dave Hassler, 2026
+
+
+   OVERVIEW
+
+   Trade commodities among star systems recently colonized by the human race.  Build wealth to advance from a lowly ensign to Grand-Master Captain, Lord of Trade!
+
+
+   INTRODUCTION
+
+   In the 22nd century CE after faster-than-light travel is realized, humanity spreads outward to the stars, colonizing nine systems in a quadrant near Sol by 2191. Some are 'frontier systems,' others more developed. Interstellar trade is vital, and growth, while sometimes slow, seems inevitable.
+   And of course, there's money to be made.
+   Using all of your charm and intelligence, you secure a four-year loan from the Interstellar Bank (Sol branch) to purchase a small, beat-up, second-hand merchant ship.  With the little cash left over, you begin your journey in the hazardous world of interstellar commodity speculation.
+   Your goal is to amass a personal fortune as a trader, advancing through the ranks from Ensign to Captain and beyond as you build a trading empire.  It won't be easy, and along the way you'll have to deal with racketeers, crooked cops, galactic storms, mutinous crew members, and the dreaded Space Patrol - not to mention the bankers who loaned you the money to start this risky adventure.
+
+
+   GAME PLAY
+
+   Getting Started
+
+   The bank has extended to you a 100,000-credit loan, most of which goes to buying your first ship.  In order to get started, you are allowed a non-payment period through 2206 (note that you're still charged interest during this period); starting in 2207, payments on the loan are due.  After 2206, you must make a payment anytime you jump to either Sol (the human capitol system) or any Advanced system, those stable enough to host networked bank branches.  You have until Star Year 2211 or 10 total visits to Sol or an Advanced system - whichever comes first - to pay off the loan before the ship is repossessed and the game ends.
+   
+   The game is fairly straightforward.  Mainly, you will load up with goods in one system, hyperjump to another, and sell stuff there.  With the profits, you can load up again with whatever that system has at a good price and jump to a new system that wants those goods.  Wash, rinse, repeat.
+
+	I - This command brings up the main informational display, showing what you own, the state of the ship, the date, your rank, and your cash and bank balances.
+	T - This command prints the current trading prices at the system you're in.  At the display you can buy and sell, or order repairs to ship damage, if needed.  Quitting here return to the Informational Display.
+	M - This prints a report of the general state of the human systems' economies.
+	J - This command presents you with the distances to the various human systems, and allows for selection of a hyperjump destination.
+	The B and D commands only work in Sol's system or another Advanced system, and the U and L commands for storing or retrieving goods only work in Sol.
+
+   The Systems
+
+   As time passes, the prices on the various planetary systems will change, often growing and expanding their economies, and occasionall suffering a setback.  Each Star Year, the Federation Trade Ministry issues a report to all registered interstellar traders about the change in general conditions in each system.
+   Sol is humanity's capital system, and always maintains high levels of technological prowess.  When you start the game, there will also be 1-3 Advanced systems, 3-5 Emerging systems, with the rest being Frontier systems.  Using the M command to review tech and agricultural levels will give you a good idea about what's available and what's wanted in any given system.  For exact prices, you'll have to jump there and use the T command to initiate trades.
+
+   Hazards
+
+   Five possible occurances might delay or derail your mission on any given jump into a system.  Hazards are more likely to occur the farther you travel on a jump (see ln. 1020).
+   1. You might encounter a crooked Port Authority officer who demands a bribe to let you dock.  The officer must be paid, even if it's a small amount.
+   2. Encountering a radiation storm will delay the journey and double the amount of fuel necessary for the trip, plus add some damage to your vessel if your don't have a deflector array installed.
+   3. Your crew may demand a vacation, leading to more delays and fuel use.
+   4. Space is a dangerous place. Various pirates and racketeers are ready to stop you for a shakedown.  If your ship takes damage from an encounter, it will affect your cargo carrying capacity...or worse.
+   5. The Federation Space Patrol is your friend...most of the time.  Not only does it protect the space lanes, but it also looks out for illegal activity. The Patrol and its planet-side agents are most active around Advanced systems.
+
+   Offers
+
+   Occasionally, as you come into a system's port (about 1-in-12 jumps, more often at Advanced systems or Sol, itself - see line 2540), you might be extended an offer to purchase a bigger cargo ship, or a deflector array for your existing ship.  To take advantage of the offer, you must have enough cash on hand for the purchase - no credit.  The higher in rank you ascend, the bigger the ships on offer.
+
+   Winning
+
+   You will likely need over 50 million credits to win the game and retire to the pleasure planet Risa with the rank of Grand-Master Captain.  The size of your ship and simply staying alive long enough to build the forture also weigh in to the rank.
+
+
+   ADAPATION TO OTHER SYSTEMS
+
+   The game is adaptable to almost any 8- or 16-bit computer that has some flavor of a Microsoft BASIC interpreter available.  Altair 680 BASIC itself (this program's language) is the 1976 6800 adaptation of Allen, Gates, and Davidoff's original MITS Altair BASIC for Altair 8080, so it's a "lowest common denominator" BASIC.
+   Only three things need to be taken into account to make a playable version:
+
+   1. Change the ANSI screen controls to your flavor's version (see line 30).  Only clear screen and reverse video commands are used, as this version displays much more like Kaufman's original than the C-16 version.
+   2. Change how the RND number is seeded (line 65).
+   3. Adapt output to 40 columns if you don't have 80-column output.  Renumbering might be necessary to do this.
+
+   Additionally, you may want to change some INPUTs to GET or GETKEY or INKEY$ or whatever.  Line 1 has a CLEAR statement to allocate string variable space; it's not needed on any MS BASIC made from 1977 on.
